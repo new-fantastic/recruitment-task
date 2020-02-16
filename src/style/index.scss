@@ -9,7 +9,7 @@
   //display: flex;
   alignment: center;
   justify-content: center;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 nav {
   position: sticky;
@@ -66,6 +66,13 @@ p  {
       text-align: left;
     }
   }
+  &.big-bold {
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+    color: #000000;
+    text-align: right;
+  }
 }
 #start {
   display: flex;
@@ -90,7 +97,15 @@ p  {
   flex-direction: column;
   position: relative;
   background: #F5F5F5;
-  //height: calc(100% - 150px);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#checkout {
+  flex-direction: column;
+  position: relative;
+  background: #F5F5F5;
   height: 100%;
   width: 100%;
   display: flex;
@@ -115,15 +130,46 @@ p  {
   flex-direction: row;
   alignment: center;
   align-items: center;
-  justify-content: center;
+  //justify-content: center;
   margin-bottom: 1rem;
   margin-top: 1rem;
   width: 100%;
   flex: 1;
+  &-center {
+    display: flex;
+    flex-direction: row;
+    alignment: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    flex: 1;
+  }
+  &-no-flex {
+    display: flex;
+    flex-direction: row;
+    alignment: center;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    //width: 100%;
+  }
 }
 .col {
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  alignment: center;
   flex: 1;
+  &-flexible {
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+    alignment: center;
+    flex: 1;
+    //display: flex;
+  }
 }
 .test {
   alignment: left;
@@ -139,6 +185,11 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+  &.black {
+  }
+  &.silver {
+    color: #7B7B7B;
+  }
 }
 h3 {
   font-family: Rubik;
@@ -165,12 +216,79 @@ h4 {
   }
 }
 .dot {
+  &-medium {
+    margin: 1rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+  }
+  &-small {
+    margin: 1rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+  }
+}
+#start-icon {
+  width: 60px;
+  height: 60px;
+}
+#size-windows {
+  display: flex;
+  flex-direction: row;
+}
+.size-window {
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin: 0.75rem;
+  padding: 20px 20px;
+  width: 304px;
+  background: #FFFFFF;
+}
+#ingredients-windows {
+  flex-direction: column;
+  flex: 3;
+  overflow-y: scroll;
+}
+.ingredients-window {
+  position: relative;
+  align-items: center;
+  width: 944px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0.75rem;
+  background: #FFFFFF;
+  flex: 1;
+}
+.ingredients-input {
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  margin: 0.5rem;
+  font-weight: bold;
+  font-size: 25px;
+  background: #FFFFFF;
+}
+#checkout-product {
   margin: 1rem;
-  height: 120px;
-  width: 120px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
+  width: 624px;
+  //height: 338px;
+  background: #FFFFFF;
+}
+.checkout-row {
+  position: relative;
+  align-items: center;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 %base-button {
   justify-content: center;
@@ -218,37 +336,20 @@ h4 {
 .flex-button {
   @extend %button-medium;
   flex: 1;
-  bottom: 2px;
 }
-#start-icon {
-  width: 60px;
-  height: 60px;
-}
-#size-windows {
-  display: flex;
-  flex-direction: row;
-  height: 400px;
-}
-.size-window {
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  margin: 0.75rem;
-  padding: 20px 20px;
-  width: 304px;
-  background: #FFFFFF;
-}
-#ingredients-windows {
-  flex-direction: column;
-  flex: 3;
-  overflow-y: scroll;
-}
-.ingredients-window {
-  position: relative;
-  width: 944px;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  margin: 0.75rem;
-  background: red;
+.large-button {
+  @extend %button-medium;
+  height: 64px;
+  width: 624px;
+  &.light {
+    margin: 0.75rem;
+    border: 1px solid #000000;
+    color: #000000;;
+    background: none;
+  }
+  &.dark {
+    margin: 0.75rem;
+    background: #000000;
+    color: #FFFFFF;
+  }
 }

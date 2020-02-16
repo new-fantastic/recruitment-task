@@ -3,63 +3,63 @@
         <h1>Wybierz rozmiar pizzy</h1>
         <div id="size-windows">
             <div class="size-window">
-                <div class="row">
+                <div class="row-center">
                     <h3 class="black">Medium</h3>
                 </div>
-                <div class="row">
-                    <span class="dot"></span>
+                <div class="row-center">
+                    <span class="dot-medium"></span>
                 </div>
-                <div class="row">
+                <div class="row-center">
                     <div class="col"><p class="medium-align-left">Rozmiar</p></div>
                     <div class="col"><h4 class="align-right">32cm</h4></div>
                 </div>
-                <div class="row">
+                <div class="row-center">
                     <div><p class="medium-align-left">Cena</p></div>
                     <div class="col"><h4 class="align-right">26.90zł</h4></div>
                 </div>
-                <div class="row">
+                <div class="row-center">
                     <div class="flex-button">
                         Wybierz rozmiar
                     </div>
                 </div>
             </div>
             <div class="size-window">
-                <div class="row">
+                <div class="row-center">
                     <h3 class="black">Medium</h3>
                 </div>
-                <div class="row">
-                    <span class="dot"></span>
+                <div class="row-center">
+                    <span class="dot-medium"></span>
                 </div>
-                <div class="row">
+                <div class="row-center">
                     <div class="col"><p class="medium-align-left">Rozmiar</p></div>
                     <div class="col"><h4 class="align-right">32cm</h4></div>
                 </div>
-                <div class="row">
+                <div class="row-center">
                     <div><p class="medium-align-left">Cena</p></div>
                     <div class="col"><h4 class="align-right">26.90zł</h4></div>
                 </div>
-                <div class="row">
+                <div class="row-center">
                     <div class="flex-button">
                         Wybierz rozmiar
                     </div>
                 </div>
             </div>
             <div class="size-window">
-                <div class="row">
+                <div class="row-center">
                     <h3 class="black">Medium</h3>
                 </div>
-                <div class="row">
-                    <span class="dot"></span>
+                <div class="row-center">
+                    <span class="dot-medium"></span>
                 </div>
-                <div class="row">
+                <div class="row-center">
                     <div class="col"><p class="medium-align-left">Rozmiar</p></div>
                     <div class="col"><h4 class="align-right">32cm</h4></div>
                 </div>
-                <div class="row">
+                <div class="row-center">
                     <div><p class="medium-align-left">Cena</p></div>
                     <div class="col"><h4 class="align-right">26.90zł</h4></div>
                 </div>
-                <div class="row">
+                <div class="row-center">
                     <div class="flex-button">
                         Wybierz rozmiar
                     </div>
