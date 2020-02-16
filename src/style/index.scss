@@ -290,19 +290,16 @@ h4 {
   flex-direction: row;
   justify-content: space-between;
 }
+
+// Buttons
 %base-button {
+  border: none;
+  outline: none;
   justify-content: center;
   position: relative;
   width: 140px;
   height: 48px;
   background: #000000;
-  &:hover {
-    background: #7B7B7B;
-    cursor: pointer;
-  }
-}
-%button-medium {
-  @extend %base-button;
   font-family: Rubik;
   font-style: normal;
   font-weight: bold;
@@ -312,44 +309,68 @@ h4 {
   align-items: center;
   text-align: center;
   color: #FFFFFF;
-}
-.return-button {
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 23px;
-  align-items: center;
-  color: #000000;
   &:hover {
+    background: #7B7B7B;
     cursor: pointer;
   }
 }
-.start-button {
-  @extend %button-medium;
-}
-.layout-button {
-  @extend %button-medium;
-  width: 224px;
-  margin: 0.75rem;
-}
-.flex-button {
-  @extend %button-medium;
-  flex: 1;
-}
-.large-button {
-  @extend %button-medium;
-  height: 64px;
-  width: 624px;
-  &.light {
-    margin: 0.75rem;
-    border: 1px solid #000000;
-    color: #000000;;
+.btn {
+  &-start {
+    @extend %base-button
+  }
+  &-return {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+    align-items: center;
+    color: #000000;
+    border: none;
+    outline: none;
     background: none;
+    &:hover {
+      cursor: pointer;
+    }
   }
-  &.dark {
+  &-layout {
+    @extend %base-button;
+    width: 224px;
     margin: 0.75rem;
-    background: #000000;
-    color: #FFFFFF;
+  }
+  &-flex {
+    @extend %base-button;
+    flex: 1;
+  }
+  &-large {
+    @extend %base-button;
+    height: 64px;
+    width: 624px;
+    &.light {
+      margin: 0.75rem;
+      border: 1px solid #000000;
+      color: #000000;;
+      background: none;
+    }
+    &.dark {
+      margin: 0.75rem;
+      background: #000000;
+      color: #FFFFFF;
+    }
   }
 }
+//.large-button {
+//  @extend %button-medium;
+//
+//  &.light {
+//    margin: 0.75rem;
+//    border: 1px solid #000000;
+//    color: #000000;;
+//    background: none;
+//  }
+//  &.dark {
+//    margin: 0.75rem;
+//    background: #000000;
+//    color: #FFFFFF;
+//  }
+//}

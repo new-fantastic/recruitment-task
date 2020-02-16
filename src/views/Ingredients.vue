@@ -103,16 +103,17 @@
                 </div>
             </div>
         </div>
-        <div id="group-11">
-            <div class="layout-button" @click="$router.go(-1)">Wstecz</div>
-            <div class="layout-button" @click="$router.push('/checkout')">Dalej</div>
-        </div>
+        <Group11
+            :route="'/checkout'"
+        />
     </div>
 </template>
 
 <script>
+    import Group11 from "@/components/ui/Group-11";
     export default {
-        name: "Ingredients"
+        name: "Ingredients",
+        components: {Group11}
     }
 </script>
 

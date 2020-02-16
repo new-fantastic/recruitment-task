@@ -13,8 +13,8 @@
             </div>
         </div>
     </div>
-    <div class="large-button light">Dodaj następny</div>
-    <div class="large-button dark">Zakończ zamówienie</div>
+    <Button class="btn-large light">Dodaj następny</Button>
+    <Button class="btn-large dark">Zakończ zamówienie</Button>
 </div>
 </template>
 

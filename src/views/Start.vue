@@ -11,15 +11,17 @@
             <h3 class="silver">Kliknij START aby rozpocząć</h3>
         </div>
         <div class="row-center">
-            <div class="start-button" @click="$router.push('/size')">START</div>
+            <Button class="btn-start" @click.native="$router.push('/size')">START</Button>
         </div>
     </div>
 </div>
 </template>
 
 <script>
+import Button from "@/components/ui/Button";
 export default {
-    name: "Start"
+    name: "Start",
+    components: {Button}
 }
 </script>
 
