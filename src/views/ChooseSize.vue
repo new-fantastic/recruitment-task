@@ -1,7 +1,7 @@
 <template>
     <div class="view">
         <h1>Wybierz rozmiar pizzy</h1>
-        <div id="size-windows">
+        <div class="size-windows">
             <div class="size-window">
                 <div class="row-center">
                     <h3 class="black">Medium</h3>
