@@ -1,5 +1,5 @@
 <template>
-    <div id="choose-size">
+    <div class="view">
         <h1>Wybierz rozmiar pizzy</h1>
         <div id="size-windows">
             <div class="size-window">
@@ -18,9 +18,9 @@
                     <div class="col"><h4 class="align-right">26.90zł</h4></div>
                 </div>
                 <div class="row-center">
-                    <div class="flex-button">
+                    <Button class="btn-flex">
                         Wybierz rozmiar
-                    </div>
+                    </Button>
                 </div>
             </div>
             <div class="size-window">
@@ -39,9 +39,9 @@
                     <div class="col"><h4 class="align-right">26.90zł</h4></div>
                 </div>
                 <div class="row-center">
-                    <div class="flex-button">
+                    <Button class="btn-flex">
                         Wybierz rozmiar
-                    </div>
+                    </Button>
                 </div>
             </div>
             <div class="size-window">
@@ -60,22 +60,24 @@
                     <div class="col"><h4 class="align-right">26.90zł</h4></div>
                 </div>
                 <div class="row-center">
-                    <div class="flex-button">
+                    <Button class="btn-flex">
                         Wybierz rozmiar
-                    </div>
+                    </Button>
                 </div>
             </div>
         </div>
-        <div id="group-11">
-            <div class="layout-button" @click="$router.go(-1)">Wstecz</div>
-            <div class="layout-button" @click="$router.push('/ingredients')">Dalej</div>
-        </div>
+        <Group11
+        :route="'/ingredients'"
+        />
     </div>
 </template>
 
 <script>
+import Button from "@/components/ui/Button";
+import Group11 from "@/components/ui/Group-11";
 export default {
-    name: "ChooseSize"
+    name: "ChooseSize",
+    components: {Group11, Button}
 }
 </script>
 

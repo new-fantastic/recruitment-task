@@ -74,43 +74,59 @@ p  {
     text-align: right;
   }
 }
-#start {
+.view {
+  flex-direction: column;
   display: flex;
   position: relative;
   background: #F5F5F5;
   height: 100%;
   width: 100%;
   align-items: center;
-  justify-content: center;
+  &.justified {
+    justify-content: center;
+  }
 }
-#choose-size {
-  flex-direction: column;
-  position: relative;
-  background: #F5F5F5;
-  //height: 100%;
-  height: calc(100% - 41px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#ingredients {
-  flex-direction: column;
-  position: relative;
-  background: #F5F5F5;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-#checkout {
-  flex-direction: column;
-  position: relative;
-  background: #F5F5F5;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
+//#choose-size {
+//  flex-direction: column;
+//  position: relative;
+//  background: #F5F5F5;
+//  height: 100%;
+//  width: 100%;
+//  //height: calc(100% - 41px);
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//}
+//#ingredients {
+//  flex-direction: column;
+//  position: relative;
+//  background: #F5F5F5;
+//  height: 100%;
+//  width: 100%;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//}
+//#checkout {
+//  flex-direction: column;
+//  position: relative;
+//  background: #F5F5F5;
+//  height: 100%;
+//  width: 100%;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//
+//}
+//#thank-you {
+//  flex-direction: column;
+//  position: relative;
+//  background: #F5F5F5;
+//  height: 100%;
+//  width: 100%;
+//  display: flex;
+//  align-items: center;
+//}
 .navbar-item {
   display: flex;
   align-items: center;
@@ -184,6 +200,7 @@ h1 {
 
   text-align: center;
   text-transform: uppercase;
+  margin: 1rem;
   color: #000000;
   &.black {
   }
@@ -197,6 +214,7 @@ h3 {
   font-weight: 500;
   font-size: 26px;
   line-height: 32px;
+  margin: 1rem;
   text-align: center;
   &.silver {
     color: #7B7B7B;
@@ -252,7 +270,7 @@ h4 {
 }
 #ingredients-windows {
   flex-direction: column;
-  flex: 3;
+  flex: 4;
   overflow-y: scroll;
 }
 .ingredients-window {
@@ -290,19 +308,16 @@ h4 {
   flex-direction: row;
   justify-content: space-between;
 }
+
+// Buttons
 %base-button {
+  border: none;
+  outline: none;
   justify-content: center;
   position: relative;
   width: 140px;
   height: 48px;
   background: #000000;
-  &:hover {
-    background: #7B7B7B;
-    cursor: pointer;
-  }
-}
-%button-medium {
-  @extend %base-button;
   font-family: Rubik;
   font-style: normal;
   font-weight: bold;
@@ -312,44 +327,74 @@ h4 {
   align-items: center;
   text-align: center;
   color: #FFFFFF;
-}
-.return-button {
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 23px;
-  align-items: center;
-  color: #000000;
   &:hover {
+    background: #7B7B7B;
     cursor: pointer;
   }
 }
-.start-button {
-  @extend %button-medium;
-}
-.layout-button {
-  @extend %button-medium;
-  width: 224px;
-  margin: 0.75rem;
-}
-.flex-button {
-  @extend %button-medium;
-  flex: 1;
-}
-.large-button {
-  @extend %button-medium;
-  height: 64px;
-  width: 624px;
-  &.light {
-    margin: 0.75rem;
-    border: 1px solid #000000;
-    color: #000000;;
+.btn {
+  &-start {
+    @extend %base-button
+  }
+  &-return-transparent {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+    align-items: center;
+    color: #000000;
+    border: none;
+    outline: none;
     background: none;
+    &:hover {
+      cursor: pointer;
+    }
   }
-  &.dark {
+  &-return-dark {
+    @extend %base-button;
+    margin: 1rem;
+    width: 292px;
+    height: 48px;
+  }
+  &-layout {
+    @extend %base-button;
+    width: 224px;
     margin: 0.75rem;
-    background: #000000;
-    color: #FFFFFF;
+  }
+  &-flex {
+    @extend %base-button;
+    flex: 1;
+  }
+  &-large {
+    @extend %base-button;
+    height: 64px;
+    width: 624px;
+    &.light {
+      margin: 0.75rem;
+      border: 1px solid #000000;
+      color: #000000;;
+      background: none;
+    }
+    &.dark {
+      margin: 0.75rem;
+      background: #000000;
+      color: #FFFFFF;
+    }
   }
 }
+//.large-button {
+//  @extend %button-medium;
+//
+//  &.light {
+//    margin: 0.75rem;
+//    border: 1px solid #000000;
+//    color: #000000;;
+//    background: none;
+//  }
+//  &.dark {
+//    margin: 0.75rem;
+//    background: #000000;
+//    color: #FFFFFF;
+//  }
+//}

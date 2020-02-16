@@ -1,5 +1,5 @@
 <template>
-    <div id="ingredients">
+    <div class="view">
         <h1>Wybierz składniki do pizzy</h1>
         <div id="ingredients-windows">
             <div class="ingredients-window">
@@ -103,16 +103,17 @@
                 </div>
             </div>
         </div>
-        <div id="group-11">
-            <div class="layout-button" @click="$router.go(-1)">Wstecz</div>
-            <div class="layout-button" @click="$router.push('/checkout')">Dalej</div>
-        </div>
+        <Group11
+            :route="'/checkout'"
+        />
     </div>
 </template>
 
 <script>
+    import Group11 from "@/components/ui/Group-11";
     export default {
-        name: "Ingredients"
+        name: "Ingredients",
+        components: {Group11}
     }
 </script>
 

@@ -1,7 +1,8 @@
 <template>
     <nav>
         <div class="navbar-item">
-            <div class="return-button" @click="$router.push('/')">Wróć na START</div>
+            <Button @click.native="$router.push('/')" class="btn-return-transparent">Wróć na START</Button>
+<!--            <div class="btn-return" >Wróć na START</div>-->
         </div>
         <div class="navbar-item ">
             <img id="start-icon" src="../../assets/pizza-icon.png">
@@ -13,8 +14,10 @@
 </template>
 
 <script>
+    import Button from "@/components/ui/Button";
     export default {
-        name: "Navbar"
+        name: "Navbar",
+        components: {Button}
     }
 </script>
 

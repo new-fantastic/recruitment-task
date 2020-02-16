@@ -4,6 +4,7 @@ import StartView from '../views/Start.vue'
 import ChooseSizeView from '../views/ChooseSize.vue'
 import IngredientsView from '../views/Ingredients.vue'
 import CheckoutView from '../views/Checkout.vue'
+import ThankYouView from '../views/ThankYou.vue'
 
 Vue.use(VueRouter)
 
@@ -30,6 +31,12 @@ const routes = [
     path: '/checkout',
     name: 'checkout',
     component: CheckoutView,
+    meta: { hideComponents: false }
+  },
+  {
+    path: '/thankyou',
+    name: 'thankYou',
+    component: ThankYouView,
     meta: { hideComponents: false }
   }
 ]
