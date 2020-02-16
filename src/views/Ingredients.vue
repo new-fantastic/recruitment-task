@@ -13,6 +13,10 @@
             <div class="ingredients-window"></div>
             <div class="ingredients-window"></div>
         </div>
+        <div id="group-11">
+            <div class="layout-button" @click="$router.go(-1)">Wstecz</div>
+            <div class="layout-button" @click="$router.push('/ingredients')">Dalej</div>
+        </div>
     </div>
 </template>
 

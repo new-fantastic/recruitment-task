@@ -65,7 +65,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div id="group-11">
             <div class="layout-button" @click="$router.go(-1)">Wstecz</div>

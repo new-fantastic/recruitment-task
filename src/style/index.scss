@@ -90,6 +90,7 @@ p  {
   flex-direction: column;
   position: relative;
   background: #F5F5F5;
+  //height: calc(100% - 150px);
   height: 100%;
   width: 100%;
   display: flex;
@@ -239,15 +240,15 @@ h4 {
   background: #FFFFFF;
 }
 #ingredients-windows {
-  height: 700px;
+  display: flex;
   flex-direction: column;
 }
 .ingredients-window {
   position: relative;
   width: 944px;
-  height: 80px;
+  height: 100px;
   display: flex;
   flex-direction: row;
   margin: 0.75rem;
-  background: #FFFFFF;
+  background: red;
 }
