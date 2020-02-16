@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#layout {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  //display: flex;
+  alignment: center;
+  justify-content: center;
+  overflow: scroll;
+}
+nav {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  left: 0%;
+  right: 0%;
+  top: 0px;
+  background: #F6F6F6;
+  //background: blue;
+  z-index: 1;
+}
+
+footer {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 41px;
+  left: 0%;
+  bottom: 0px;
+  width: 100%;
+  background: #000000;
+}
+#group-11 {
+  position: relative;
+  display: flex;
+  flex: 1;
+  bottom: 22px;
+  margin: 1rem;
+}
+
+p  {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    align-items: center;
+    text-align: center;
+    //display: flex;
+  &.small {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  &.medium {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    &-align-left {
+      text-align: left;
+    }
+  }
+}
+#start {
+  display: flex;
+  position: relative;
+  background: #F5F5F5;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#choose-size {
+  flex-direction: column;
+  position: relative;
+  background: #F5F5F5;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.navbar-item {
+  display: flex;
+  align-items: center;
+  alignment: center;
+  justify-content: center;
+  flex: 1;
+}
+#group-9 {
+  alignment: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  alignment: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  flex: 1;
+}
+.col {
+  flex-direction: column;
+  flex: 1;
+}
+.test {
+  alignment: left;
+}
+h1 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  /* identical to box height, or 117% */
+
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+h3 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+  &.silver {
+    color: #7B7B7B;
+  }
+  &.black {
+    color: #000000;
+  }
+}
+h4 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  &.align-right {
+    text-align: right;
+  }
+}
+.dot {
+  margin: 1rem;
+  height: 120px;
+  width: 120px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+%base-button {
+  justify-content: center;
+  position: relative;
+  width: 140px;
+  height: 48px;
+  background: #000000;
+  &:hover {
+    background: #7B7B7B;
+    cursor: pointer;
+  }
+}
+%button-medium {
+  @extend %base-button;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+.return-button {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 23px;
+  align-items: center;
+  color: #000000;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.start-button {
+  @extend %button-medium;
+}
+.layout-button {
+  @extend %button-medium;
+  width: 224px;
+  margin: 0.75rem;
+}
+.flex-button {
+  @extend %button-medium;
+  flex: 1;
+}
+#start-icon {
+  width: 60px;
+  height: 60px;
+}
+#size-windows {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+}
+.size-window {
+  align-items: center;
+  position: relative;
+  margin: 0.75rem;
+  width: 304px;
+  background: #FFFFFF;
+}
