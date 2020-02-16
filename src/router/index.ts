@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import StartView from '../views/Start.vue'
 import ChooseSizeView from '../views/ChooseSize.vue'
+import IngredientsView from '../views/Ingredients.vue'
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,12 @@ const routes = [
     path: '/size',
     name: 'chooseSize',
     component: ChooseSizeView,
+    meta: { hideComponents: false }
+  },
+  {
+    path: '/ingredients',
+    name: 'ingredients',
+    component: IngredientsView,
     meta: { hideComponents: false }
   }
 ]
