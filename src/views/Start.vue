@@ -1,5 +1,5 @@
 <template>
-<div id="start">
+<div class="view justified">
     <div id="group-9">
         <div class="row-center">
             <img id="start-icon" src="../assets/pizza-icon.png">

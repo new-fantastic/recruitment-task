@@ -1,5 +1,5 @@
 <template>
-    <div id="ingredients">
+    <div class="view">
         <h1>Wybierz składniki do pizzy</h1>
         <div id="ingredients-windows">
             <div class="ingredients-window">

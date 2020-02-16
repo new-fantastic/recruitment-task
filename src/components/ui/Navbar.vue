@@ -1,7 +1,7 @@
 <template>
     <nav>
         <div class="navbar-item">
-            <Button @click.native="$router.push('/')" class="btn-return">Wróć na START</Button>
+            <Button @click.native="$router.push('/')" class="btn-return-transparent">Wróć na START</Button>
 <!--            <div class="btn-return" >Wróć na START</div>-->
         </div>
         <div class="navbar-item ">

@@ -74,43 +74,59 @@ p  {
     text-align: right;
   }
 }
-#start {
+.view {
+  flex-direction: column;
   display: flex;
   position: relative;
   background: #F5F5F5;
   height: 100%;
   width: 100%;
   align-items: center;
-  justify-content: center;
+  &.justified {
+    justify-content: center;
+  }
 }
-#choose-size {
-  flex-direction: column;
-  position: relative;
-  background: #F5F5F5;
-  //height: 100%;
-  height: calc(100% - 41px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#ingredients {
-  flex-direction: column;
-  position: relative;
-  background: #F5F5F5;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-#checkout {
-  flex-direction: column;
-  position: relative;
-  background: #F5F5F5;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
+//#choose-size {
+//  flex-direction: column;
+//  position: relative;
+//  background: #F5F5F5;
+//  height: 100%;
+//  width: 100%;
+//  //height: calc(100% - 41px);
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//}
+//#ingredients {
+//  flex-direction: column;
+//  position: relative;
+//  background: #F5F5F5;
+//  height: 100%;
+//  width: 100%;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//}
+//#checkout {
+//  flex-direction: column;
+//  position: relative;
+//  background: #F5F5F5;
+//  height: 100%;
+//  width: 100%;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//
+//}
+//#thank-you {
+//  flex-direction: column;
+//  position: relative;
+//  background: #F5F5F5;
+//  height: 100%;
+//  width: 100%;
+//  display: flex;
+//  align-items: center;
+//}
 .navbar-item {
   display: flex;
   align-items: center;
@@ -184,6 +200,7 @@ h1 {
 
   text-align: center;
   text-transform: uppercase;
+  margin: 1rem;
   color: #000000;
   &.black {
   }
@@ -197,6 +214,7 @@ h3 {
   font-weight: 500;
   font-size: 26px;
   line-height: 32px;
+  margin: 1rem;
   text-align: center;
   &.silver {
     color: #7B7B7B;
@@ -252,7 +270,7 @@ h4 {
 }
 #ingredients-windows {
   flex-direction: column;
-  flex: 3;
+  flex: 4;
   overflow-y: scroll;
 }
 .ingredients-window {
@@ -318,7 +336,7 @@ h4 {
   &-start {
     @extend %base-button
   }
-  &-return {
+  &-return-transparent {
     font-family: Rubik;
     font-style: normal;
     font-weight: bold;
@@ -332,6 +350,12 @@ h4 {
     &:hover {
       cursor: pointer;
     }
+  }
+  &-return-dark {
+    @extend %base-button;
+    margin: 1rem;
+    width: 292px;
+    height: 48px;
   }
   &-layout {
     @extend %base-button;
