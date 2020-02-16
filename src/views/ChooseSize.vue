@@ -1,13 +1,89 @@
 <template>
-    $END$
+    <div id="choose-size">
+        <h1>Wybierz rozmiar pizzy</h1>
+        <div id="size-windows">
+            <div class="size-window">
+                <div class="row-center">
+                    <h3 class="black">Medium</h3>
+                </div>
+                <div class="row-center">
+                    <span class="dot-medium"></span>
+                </div>
+                <div class="row-center">
+                    <div class="col"><p class="medium-align-left">Rozmiar</p></div>
+                    <div class="col"><h4 class="align-right">32cm</h4></div>
+                </div>
+                <div class="row-center">
+                    <div><p class="medium-align-left">Cena</p></div>
+                    <div class="col"><h4 class="align-right">26.90zł</h4></div>
+                </div>
+                <div class="row-center">
+                    <div class="flex-button">
+                        Wybierz rozmiar
+                    </div>
+                </div>
+            </div>
+            <div class="size-window">
+                <div class="row-center">
+                    <h3 class="black">Medium</h3>
+                </div>
+                <div class="row-center">
+                    <span class="dot-medium"></span>
+                </div>
+                <div class="row-center">
+                    <div class="col"><p class="medium-align-left">Rozmiar</p></div>
+                    <div class="col"><h4 class="align-right">32cm</h4></div>
+                </div>
+                <div class="row-center">
+                    <div><p class="medium-align-left">Cena</p></div>
+                    <div class="col"><h4 class="align-right">26.90zł</h4></div>
+                </div>
+                <div class="row-center">
+                    <div class="flex-button">
+                        Wybierz rozmiar
+                    </div>
+                </div>
+            </div>
+            <div class="size-window">
+                <div class="row-center">
+                    <h3 class="black">Medium</h3>
+                </div>
+                <div class="row-center">
+                    <span class="dot-medium"></span>
+                </div>
+                <div class="row-center">
+                    <div class="col"><p class="medium-align-left">Rozmiar</p></div>
+                    <div class="col"><h4 class="align-right">32cm</h4></div>
+                </div>
+                <div class="row-center">
+                    <div><p class="medium-align-left">Cena</p></div>
+                    <div class="col"><h4 class="align-right">26.90zł</h4></div>
+                </div>
+                <div class="row-center">
+                    <div class="flex-button">
+                        Wybierz rozmiar
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="group-11">
+            <div class="layout-button" @click="$router.go(-1)">Wstecz</div>
+            <div class="layout-button" @click="$router.push('/ingredients')">Dalej</div>
+        </div>
+    </div>
 </template>
 
 <script>
-    export default {
-        name: "ChooseSize"
-    }
+export default {
+    name: "ChooseSize"
+}
 </script>
 
 <style scoped>
+#rectangle {
+    width: 304px;
+    height: 467px;
+    background: blue;
 
+}
 </style>
