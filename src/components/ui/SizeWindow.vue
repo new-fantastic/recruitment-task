@@ -15,7 +15,7 @@
             <div class="col"><h4 class="align-right">{{sizeEndpoint.price}} zł</h4></div>
         </div>
         <div class="row-center">
-            <Button class="btn-flex">
+            <Button @click="chooseSize(sizeEndpoint.size, sizeEndpoint.maximum_ingredients_weight)" class="btn-flex">
                 Wybierz rozmiar
             </Button>
         </div>
@@ -23,11 +23,19 @@
 </template>
 
 <script>
+import {mapActions} from "vuex";
+
 export default {
     name: "SizeWindow",
     props: {
         sizeEndpoint: Object
-    }
+    },
+    methods: {
+        ...mapActions('orders', ['addSize']),
+        chooseSize (size, weight) {
+            this.addSize({size, weight})
+        }
+    },
 }
 </script>
 

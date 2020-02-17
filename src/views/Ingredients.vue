@@ -3,8 +3,9 @@
         <h1>Wybierz składniki do pizzy</h1>
         <div id="ingredients-windows">
             <IngredientsWindow
-                v-for="ingredientsEndpoint in ingredientsEndpoints" :key="ingredientsEndpoint.index"
+                v-for="(ingredientsEndpoint, itemKey) in ingredientsEndpoints" :key="ingredientsEndpoint.index"
                 :ingredientsEndpoint="ingredientsEndpoint"
+                :itemKey="itemKey"
             />
         </div>
         <Group11
@@ -20,8 +21,9 @@
     export default {
         name: "Ingredients",
         components: {IngredientsWindow, Group11},
-        computed: mapGetters('endpoints', ['ingredientsEndpoints']),
-
+        computed: {
+            ...mapGetters('endpoints', ['ingredientsEndpoints']),
+        }
     }
 </script>
 
