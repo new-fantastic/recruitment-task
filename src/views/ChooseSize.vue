@@ -2,69 +2,10 @@
     <div class="view">
         <h1>Wybierz rozmiar pizzy</h1>
         <div class="size-windows">
-            <div class="size-window">
-                <div class="row-center">
-                    <h3 class="black">Medium</h3>
-                </div>
-                <div class="row-center">
-                    <span class="dot-medium"></span>
-                </div>
-                <div class="row-center">
-                    <div class="col"><p class="medium-align-left">Rozmiar</p></div>
-                    <div class="col"><h4 class="align-right">32cm</h4></div>
-                </div>
-                <div class="row-center">
-                    <div><p class="medium-align-left">Cena</p></div>
-                    <div class="col"><h4 class="align-right">26.90zł</h4></div>
-                </div>
-                <div class="row-center">
-                    <Button class="btn-flex">
-                        Wybierz rozmiar
-                    </Button>
-                </div>
-            </div>
-            <div class="size-window">
-                <div class="row-center">
-                    <h3 class="black">Medium</h3>
-                </div>
-                <div class="row-center">
-                    <span class="dot-medium"></span>
-                </div>
-                <div class="row-center">
-                    <div class="col"><p class="medium-align-left">Rozmiar</p></div>
-                    <div class="col"><h4 class="align-right">32cm</h4></div>
-                </div>
-                <div class="row-center">
-                    <div><p class="medium-align-left">Cena</p></div>
-                    <div class="col"><h4 class="align-right">26.90zł</h4></div>
-                </div>
-                <div class="row-center">
-                    <Button class="btn-flex">
-                        Wybierz rozmiar
-                    </Button>
-                </div>
-            </div>
-            <div class="size-window">
-                <div class="row-center">
-                    <h3 class="black">Medium</h3>
-                </div>
-                <div class="row-center">
-                    <span class="dot-medium"></span>
-                </div>
-                <div class="row-center">
-                    <div class="col"><p class="medium-align-left">Rozmiar</p></div>
-                    <div class="col"><h4 class="align-right">32cm</h4></div>
-                </div>
-                <div class="row-center">
-                    <div><p class="medium-align-left">Cena</p></div>
-                    <div class="col"><h4 class="align-right">26.90zł</h4></div>
-                </div>
-                <div class="row-center">
-                    <Button class="btn-flex">
-                        Wybierz rozmiar
-                    </Button>
-                </div>
-            </div>
+            <SizeWindow
+                v-for="sizeEndpoint in sizeEndpoints" :key="sizeEndpoint.index"
+                :sizeEndpoint="sizeEndpoint"
+            />
         </div>
         <Group11
         :route="'/ingredients'"
@@ -73,11 +14,14 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Button from "@/components/ui/Button";
 import Group11 from "@/components/ui/Group-11";
+import SizeWindow from "../components/ui/SizeWindow";
 export default {
     name: "ChooseSize",
-    components: {Group11, Button}
+    components: {SizeWindow, Group11, Button},
+    computed: mapGetters('endpoints', ['sizeEndpoints']),
 }
 </script>
 
