@@ -1,5 +1,5 @@
 <template>
-<div class="view justified">
+<div class="view justified" v-if="startEndpoints">
     <div id="group-9">
         <div class="row-center">
             <img class="pizza-icon" src="../assets/pizza-icon.png">
