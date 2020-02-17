@@ -2,106 +2,10 @@
     <div class="view">
         <h1>Wybierz składniki do pizzy</h1>
         <div id="ingredients-windows">
-            <div class="ingredients-window">
-                <div class="row">
-                    <span class="dot-small"></span>
-                    <h3>Nazwa</h3>
-                </div>
-                <div class="row-no-flex">
-                    <input class="ingredients-input">
-                    <p class="big-bold">4zł/szt</p>
-                </div>
-            </div>
-            <div class="ingredients-window">
-                <div class="row">
-                    <span class="dot-small"></span>
-                    <h3>Nazwa</h3>
-                </div>
-                <div class="row-no-flex">
-                    <input class="ingredients-input">
-                    <p class="big-bold">4zł/szt</p>
-                </div>
-            </div>
-            <div class="ingredients-window">
-                <div class="row">
-                    <span class="dot-small"></span>
-                    <h3>Nazwa</h3>
-                </div>
-                <div class="row-no-flex">
-                    <input class="ingredients-input">
-                    <p class="big-bold">4zł/szt</p>
-                </div>
-            </div>
-            <div class="ingredients-window">
-                <div class="row">
-                    <span class="dot-small"></span>
-                    <h3>Nazwa</h3>
-                </div>
-                <div class="row-no-flex">
-                    <input class="ingredients-input">
-                    <p class="big-bold">4zł/szt</p>
-                </div>
-            </div>
-            <div class="ingredients-window">
-                <div class="row">
-                    <span class="dot-small"></span>
-                    <h3>Nazwa</h3>
-                </div>
-                <div class="row-no-flex">
-                    <input class="ingredients-input">
-                    <p class="big-bold">4zł/szt</p>
-                </div>
-            </div>
-            <div class="ingredients-window">
-                <div class="row">
-                    <span class="dot-small"></span>
-                    <h3>Nazwa</h3>
-                </div>
-                <div class="row-no-flex">
-                    <input class="ingredients-input">
-                    <p class="big-bold">4zł/szt</p>
-                </div>
-            </div>
-            <div class="ingredients-window">
-                <div class="row">
-                    <span class="dot-small"></span>
-                    <h3>Nazwa</h3>
-                </div>
-                <div class="row-no-flex">
-                    <input class="ingredients-input">
-                    <p class="big-bold">4zł/szt</p>
-                </div>
-            </div>
-            <div class="ingredients-window">
-                <div class="row">
-                    <span class="dot-small"></span>
-                    <h3>Nazwa</h3>
-                </div>
-                <div class="row-no-flex">
-                    <input class="ingredients-input">
-                    <p class="big-bold">4zł/szt</p>
-                </div>
-            </div>
-            <div class="ingredients-window">
-                <div class="row">
-                    <span class="dot-small"></span>
-                    <h3>Nazwa</h3>
-                </div>
-                <div class="row-no-flex">
-                    <input class="ingredients-input">
-                    <p class="big-bold">4zł/szt</p>
-                </div>
-            </div>
-            <div class="ingredients-window">
-                <div class="row">
-                    <span class="dot-small"></span>
-                    <h3>Nazwa</h3>
-                </div>
-                <div class="row-no-flex">
-                    <input class="ingredients-input">
-                    <p class="big-bold">4zł/szt</p>
-                </div>
-            </div>
+            <IngredientsWindow
+                v-for="ingredientsEndpoint in ingredientsEndpoints" :key="ingredientsEndpoint.index"
+                :ingredientsEndpoint="ingredientsEndpoint"
+            />
         </div>
         <Group11
             :route="'/checkout'"
@@ -111,9 +15,13 @@
 
 <script>
     import Group11 from "@/components/ui/Group-11";
+    import { mapGetters } from "vuex";
+    import IngredientsWindow from "../components/ui/IngredientsWindow";
     export default {
         name: "Ingredients",
-        components: {Group11}
+        components: {IngredientsWindow, Group11},
+        computed: mapGetters('endpoints', ['ingredientsEndpoints']),
+
     }
 </script>
 

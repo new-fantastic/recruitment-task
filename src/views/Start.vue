@@ -5,10 +5,10 @@
             <img class="pizza-icon" src="../assets/pizza-icon.png">
         </div>
         <div class="row-center">
-            <h1>Witaj w kreatorze pizzy!</h1>
+            <h1>{{ startEndpoints.title }}</h1>
         </div>
         <div class="row-center">
-            <h3 class="silver">Kliknij START aby rozpocząć</h3>
+            <h3 class="silver">{{ startEndpoints.content }}</h3>
         </div>
         <div class="row-center">
             <Button class="btn-start" @click.native="$router.push('/size')">START</Button>
@@ -18,10 +18,12 @@
 </template>
 
 <script>
-import Button from "@/components/ui/Button";
+import Button from '@/components/ui/Button';
+import { mapGetters } from 'vuex'
 export default {
     name: "Start",
-    components: {Button}
+    components: {Button},
+    computed: mapGetters('endpoints', ['startEndpoints']),
 }
 </script>
 

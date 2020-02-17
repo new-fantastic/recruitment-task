@@ -12,11 +12,18 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import Navbar from "@/components/ui/Navbar.vue";
+import Navbar from "./components/ui/Navbar.vue";
+import { mapActions } from "vuex";
 
 export default Vue.extend({
   name: 'app',
   components: {Navbar},
+  methods: {
+    ...mapActions('endpoints', ['getAllEndpoints'])
+  },
+  created () {
+    this.getAllEndpoints()
+  }
 });
 </script>
 
