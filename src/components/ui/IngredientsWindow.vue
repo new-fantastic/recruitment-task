@@ -14,10 +14,12 @@
 <script>
 import translatedIngredients from "../../libs/translatedIngredients";
 import { mapGetters, mapActions } from "vuex";
+import index from "../../store";
 export default {
     name: "IngredientsWindow",
     data () {
         return {
+            summaryWeight: null,
             ingredientsQuantity: null,
             translatedIngredients: translatedIngredients,
 
@@ -37,10 +39,19 @@ export default {
         ...mapGetters('orders', ['pizzaWeight']),
         ...mapGetters('orders', ['ingredients']),
         ...mapGetters('endpoints', ['sizeEndpoints']),
+        ...mapGetters('endpoints', ['ingredientsEndpoints']),
     },
     watch: {
-        'ingredients' (value) {
-            
+        ingredients: {
+            handler: function () {
+                let summaryValue = null
+                this.ingredients.forEach(ingredient => {
+                    let limit = this.ingredientsEndpoints.find(({name}) => name === ingredient.name)
+                    summaryValue += limit.weight * ingredient.value
+                    console.log(summaryValue)
+                })
+            },
+            deep: true
         }
     }
 }
