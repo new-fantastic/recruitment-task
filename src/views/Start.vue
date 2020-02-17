@@ -2,7 +2,7 @@
 <div class="view justified">
     <div id="group-9">
         <div class="row-center">
-            <img id="start-icon" src="../assets/pizza-icon.png">
+            <img class="pizza-icon" src="../assets/pizza-icon.png">
         </div>
         <div class="row-center">
             <h1>Witaj w kreatorze pizzy!</h1>

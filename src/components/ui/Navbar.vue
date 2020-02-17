@@ -1,14 +1,16 @@
 <template>
     <nav>
-        <div class="navbar-item">
+        <div class="navbar-item" v-if="$route.path !== '/checkout'">
             <Button @click.native="$router.push('/')" class="btn-return-transparent">Wróć na START</Button>
-<!--            <div class="btn-return" >Wróć na START</div>-->
+        </div>
+        <div v-else class="navbar-item">
+            <Button @click.native="$router.push('/ingredients')" class="btn-return-transparent">Powrót do edycji</Button>
         </div>
         <div class="navbar-item ">
-            <img id="start-icon" src="../../assets/pizza-icon.png">
+            <img class="pizza-icon" src="../../assets/pizza-icon.png">
         </div>
         <div class="navbar-item">
-         <p>CENA</p>
+         <p class="navbar-price">CENA</p>
         </div>
     </nav>
 </template>

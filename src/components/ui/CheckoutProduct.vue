@@ -1,5 +1,5 @@
 <template>
-    <div id="checkout-product">
+    <div class="checkout-product">
         <div id="pizza-size-row">
             <div class="checkout-row">
                 <h3 class="black">Rozmiar MAX</h3>
