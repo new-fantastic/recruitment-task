@@ -15,7 +15,7 @@
             <div class="col"><h4 class="align-right">{{sizeEndpoint.price}} zł</h4></div>
         </div>
         <div class="row-center">
-            <Button @click="chooseSize(sizeEndpoint.size, sizeEndpoint.maximum_ingredients_weight)" class="btn-flex">
+            <Button @click="checkSize(sizeEndpoint.name, sizeEndpoint.maximum_ingredients_weight, sizeEndpoint.price)" class="btn-flex">
                 Wybierz rozmiar
             </Button>
         </div>
@@ -24,18 +24,29 @@
 
 <script>
 import {mapActions} from "vuex";
-
+import { bus } from '../../main'
 export default {
     name: "SizeWindow",
+    data () {
+        return {
+            checkedSize: {
+                name: null,
+                weight: null,
+                price: null
+            }
+        }
+    },
     props: {
         sizeEndpoint: Object
     },
     methods: {
-        ...mapActions('orders', ['addSize']),
-        chooseSize (size, weight) {
-            this.addSize({size, weight})
+        checkSize (name, weight, price) {
+            this.checkedSize.name = name;
+            this.checkedSize.weight = weight;
+            this.checkedSize.price = price;
+            bus.$emit('sendCheckedSize', this.checkedSize)
         }
-    },
+    }
 }
 </script>
 

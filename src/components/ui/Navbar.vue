@@ -10,17 +10,21 @@
             <img class="pizza-icon" src="../../assets/pizza-icon.png">
         </div>
         <div class="navbar-item">
-         <p class="navbar-price">CENA</p>
+         <p class="navbar-price"v-if="summaryPrice !== 0">{{summaryPrice}}zł</p>
         </div>
     </nav>
 </template>
 
 <script>
-    import Button from "@/components/ui/Button";
-    export default {
-        name: "Navbar",
-        components: {Button}
+import { mapGetters } from "vuex";
+import Button from "@/components/ui/Button";
+export default {
+    name: "Navbar",
+    components: {Button},
+    computed: {
+        ...mapGetters('orders', ['summaryPrice']),
     }
+}
 </script>
 
 <style scoped>

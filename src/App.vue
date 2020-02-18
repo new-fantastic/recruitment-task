@@ -4,9 +4,7 @@
       v-if="!$route.meta.hideComponents"
     />
     <router-view/>
-    <footer>
-      <p class="small">&copy; 2020 Pizza Corp LTD</p>
-    </footer>
+    <Footer/>
   </div>
 </template>
 
@@ -14,10 +12,11 @@
 import Vue from 'vue';
 import Navbar from "./components/ui/Navbar.vue";
 import { mapActions } from "vuex";
+import Footer from "./components/ui/Footer.vue";
 
 export default Vue.extend({
   name: 'app',
-  components: {Navbar},
+  components: {Footer, Navbar},
   methods: {
     ...mapActions('endpoints', ['getAllEndpoints'])
   },
