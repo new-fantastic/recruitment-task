@@ -1,29 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div id="layout">
+    <navbar
+      v-if="!$route.meta.hideComponents"
+    />
+    <router-view/>
+    <Footer/>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import Navbar from "./components/ui/Navbar.vue";
+import { mapActions } from "vuex";
+import Footer from "./components/ui/Footer.vue";
 
 export default Vue.extend({
   name: 'app',
-  components: {
-    HelloWorld
+  components: {Footer, Navbar},
+  methods: {
+    ...mapActions('endpoints', ['getAllEndpoints'])
+  },
+  created () {
+    this.getAllEndpoints()
   }
 });
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "style";
 </style>

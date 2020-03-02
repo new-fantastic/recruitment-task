@@ -1,3 +1,7 @@
+link: https://recruitment-task-671cb.firebaseapp.com/
+
+Przepraszam za zwłokę, ale pod koniec prac miałem małe problemy z hostingiem.
+
 # newfantastic Recruitment
 
 ## Prototyp

@@ -1,0 +1,512 @@
+//basics
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+//layout
+
+#layout {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  alignment: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+nav {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  left: 0%;
+  right: 0%;
+  top: 0px;
+  background: #F6F6F6;
+  z-index: 1;
+}
+.navbar-item {
+  display: flex;
+  align-items: center;
+  alignment: center;
+  justify-content: center;
+  flex: 1;
+}
+#group-11 {
+  position: relative;
+  display: flex;
+  flex: 2;
+  margin: 1rem;
+}
+footer {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 41px;
+  left: 0%;
+  bottom: 0px;
+  width: 100%;
+  background: #000000;
+}
+
+//view
+
+.view {
+  flex-direction: column;
+  position: relative;
+  display: flex;
+  background: #F5F5F5;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  &.justified {
+    justify-content: center;
+  }
+}
+#group-9 {
+  alignment: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.dot-medium {
+  margin: 1rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.pizza-icon {
+  width: 60px;
+  height: 60px;
+}
+.size-windows {
+  flex-direction: row;
+  display: flex;
+}
+.size-window {
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin: 0.75rem;
+  padding: 0px 15px;
+  width: 304px;
+  background: #FFFFFF;
+}
+#ingredients-windows {
+  flex-direction: column;
+  flex: 4;
+  overflow-y: scroll;
+}
+.ingredients-window {
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0.75rem;
+  background: #FFFFFF;
+  flex: 1;
+}
+.ingredients-input {
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  margin: 0.5rem;
+  font-weight: bold;
+  font-size: 25px;
+  background: #FFFFFF;
+}
+.checkout-product {
+  margin: 1rem;
+  background: #FFFFFF;
+}
+.checkout-row {
+  position: relative;
+  align-items: center;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+// grid
+
+.row {
+  display: flex;
+  flex-direction: row;
+  alignment: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  flex: 1;
+  &-center {
+    display: flex;
+    flex-direction: row;
+    alignment: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    flex: 1;
+  }
+  &-no-flex {
+    display: flex;
+    flex-direction: row;
+    alignment: center;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+  }
+}
+.col {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  alignment: center;
+  flex: 1;
+  &-flexible {
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+    alignment: center;
+    flex: 1;
+  }
+}
+// buttons
+
+%base-button {
+  border: none;
+  outline: none;
+  justify-content: center;
+  position: relative;
+  width: 140px;
+  height: 48px;
+  background: #000000;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  &:hover {
+    background: #7B7B7B;
+    cursor: pointer;
+  }
+}
+.btn {
+  &-start {
+    @extend %base-button
+  }
+  &-return-transparent {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    align-items: center;
+    color: #000000;
+    border: none;
+    outline: none;
+    background: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &-return-dark {
+    @extend %base-button;
+    margin: 1rem;
+    height: 48px;
+  }
+  &-layout {
+    @extend %base-button;
+    margin: 0.75rem;
+  }
+  &-flex {
+    @extend %base-button;
+    flex: 1;
+  }
+  &-large {
+    @extend %base-button;
+    height: 64px;
+    //width: 624px;
+    &.light {
+      margin: 0.75rem;
+      border: 1px solid #000000;
+      color: #000000;;
+      background: none;
+    }
+    &.dark {
+      margin: 0.75rem;
+      background: #000000;
+      color: #FFFFFF;
+    }
+  }
+}
+
+// text styles
+
+p {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    align-items: center;
+    text-align: center;
+  &.small {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  &.medium {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    &-align-left {
+      text-align: left;
+    }
+  }
+  &.big-bold {
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+    color: #000000;
+    text-align: right;
+  }
+  &.navbar-price {
+    font-weight: 500;
+  }
+}
+h1 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 42px;
+
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1rem;
+  color: #000000;
+  &.black {
+  }
+  &.silver {
+    color: #7B7B7B;
+  }
+}
+h3 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  margin: 1rem;
+  text-align: center;
+  &.silver {
+    color: #7B7B7B;
+  }
+  &.black {
+    color: #000000;
+  }
+}
+h4 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  &.align-right {
+    text-align: right;
+  }
+}
+
+//mixins
+
+//navbar
+@mixin mobile-navbar() {
+  height: 60px;
+  .btn-return-transparent {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .pizza-icon {
+    width: 40px;
+    height: 40px;
+  }
+  p {
+    font-size: 19px;
+    line-height: 23px;
+  }
+
+}
+@mixin desktop-navbar() {
+  height: 100px;
+  .btn-return-transparent {
+    font-size: 19px;
+    line-height: 23px;
+  }
+  .pizza-icon {
+    width: 60px;
+    height: 60px;
+  }
+  p {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+//view
+
+@mixin mobile-view() {
+  //headers
+
+  h1 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 23px;
+  }
+  //buttons
+
+  .btn-start {
+    height: 45.4px;
+  }
+  .btn-layout {
+    font-size: 17px;
+    width: 160px;
+  }
+  .btn-flex {
+    font-size: 17px;
+  }
+  .btn-large {
+    width: 338px;
+  }
+  .btn-return-dark {
+    width: 326px;
+  }
+
+  //ChooseSizeView
+
+  .size-windows {
+    margin: 1rem;
+    overflow-y: auto;
+    width: 100%;
+    p {
+      font-size: 14px;
+    }
+    h4 {
+      font-size: 18px;
+    }
+  }
+  .dot-medium {
+    height: 100px;
+    width: 100px;
+  }
+
+  //IngredientsView
+
+  .ingredients-window {
+    width: 336px;
+    height: 120px;
+  }
+
+  //Checkout
+
+  .checkout-product {
+    width: 338px;
+    h3 {
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 26px;
+    }
+  }
+}
+@mixin desktop-view() {
+
+  //headers
+
+  h1 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  .btn-start {
+    height: 48px;
+  }
+  .btn-layout {
+    width: 224px;
+  }
+  .btn-large {
+    width: 624px;
+  }
+  .btn-return-dark {
+    width: 292px;
+  }
+
+  //ChooseSizeView
+
+  .size-windows {
+    margin: 1rem;
+    overflow-y: hidden;
+    p {
+      font-size: 16px;
+    }
+    h4 {
+      font-size: 22px;
+    }
+  }
+
+  .dot-medium {
+    height: 120px;
+    width: 120px;
+  }
+  .dot-small {
+    margin: 1rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+  }
+
+  //IngredientsView
+
+  .ingredients-window {
+    width: 944px;
+    height: 100px;
+  }
+
+  //Checkout
+
+  .checkout-product {
+    width: 624px;
+  }
+}
+
+//media queries
+
+@media only screen and (max-width: 767px) {
+  .view {
+    overflow: hidden;
+    @include mobile-view();
+  }
+  nav {
+    @include mobile-navbar();
+  }
+}
+@media only screen and (min-width: 768px) {
+  nav {
+    @include desktop-navbar();
+  }
+  .view {
+    @include desktop-view();
+  }
+}
